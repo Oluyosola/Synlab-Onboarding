@@ -41,7 +41,7 @@ Artisan::command('elmas:refresh', function() {
 Artisan::command('elmas:settings', function () {
 
     //App Settings
-    setting(['app.name' => "Elmas User Management"])->save();
+    setting(['app.name' => "Synlab Onboarding"])->save();
     setting(['app.locale' => "en"])->save();
     setting(['app.default_role' => 2])->save();
     setting(['app.enable_api' => false])->save();

@@ -43,8 +43,13 @@
 	<!-- Sidebar -->
 	<div class="sidebar border-right" id="sidebar-wrapper">
 		<div class="list-group list-group-flush">
+			@can('roles_access')
 			<a href="{{route('home')}}" class="list-group-item list-group-item-action"><i class="material-icons">home</i> {{__('Dashboard')}}</a>
-			@can('users_access')
+			@endcan
+			@can('users_dashboard')
+			<a href="{{route('user-dashboard')}}" class="list-group-item list-group-item-action"><i class="material-icons">home</i> {{__('User Dashboard')}}</a>
+			@endcan
+			@can('roles_access')
 				<a href="{{route('users.index')}}" class="list-group-item list-group-item-action"><i class="material-icons">supervisor_account</i> {{__('Users')}}</a>
 			@endcan
 

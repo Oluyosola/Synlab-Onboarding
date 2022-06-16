@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,3 +84,7 @@ Route::middleware($middlewares)->group(function(){
 
 	Route::get('uploads/avatars/{file_path}', 'AvatarController@showAvatar');
 });
+
+Route::get('user-dashboard', 'DashboardController@index')->name('user-dashboard');
+Route::get('user-onboarding', 'DashboardController@onboarding')->name('user.onboarding');
+
