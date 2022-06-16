@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ setting('app.name') }}</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/synlab-fav-icon.png') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
